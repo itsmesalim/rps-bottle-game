@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPS Ultimate Battle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- cdn for font family  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- cdn for font awesome   -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- cdn for sweetalert2   -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- cdn for toastifyjs   -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-card">
+      <h1>RPS Ultimate Battle</h1>
+
+      <div class="scoreboard">
+        <div>USER <span id="user-score" class="score-val">0</span></div>
+        <div style="color: #64748b">VS</div>
+        <div>CPU <span id="cpu-score" class="score-val">0</span></div>
+      </div>
+
+      <div class="display-screen">
+        <div id="status">Waiting for your move...</div>
+        <div
+          id="result-detail"
+          style="font-weight: bold; margin-top: 5px; color: white"
+        ></div>
+      </div>
+
+      <div class="choices-container">
+        <button class="choice-btn" id="rock" onclick="playGame('rock')">
+          <i class="fa-solid fa-hill-rockslide"></i><span>Rock</span>
+        </button>
+        <button class="choice-btn" id="paper" onclick="playGame('paper')">
+          <i class="fa-solid fa-toilet-paper"></i><span>Paper</span>
+        </button>
+        <button class="choice-btn" id="scissors" onclick="playGame('scissors')">
+          <i class="fa-solid fa-scissors"></i> <span>Scissors</span>
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

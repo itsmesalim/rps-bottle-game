@@ -53,8 +53,16 @@ const playGame = (userChoice) => {
         }
       });
     } else {
-      resultDetailElement.innerText = `IT'S Warning!, ${tieCount}`;
-      resultDetailElement.style.color = "#F59E0B";
+      if (tieCount < 2) {
+        resultDetailElement.innerText = `IT'S ${tieCount}st, Warning!`;
+        resultDetailElement.style.color = "#F59E0B";
+      } else if (tieCount == 2) {
+        resultDetailElement.innerText = `IT'S ${tieCount}nd, Warning!`;
+        resultDetailElement.style.color = "#F59E0B";
+      } else {
+        resultDetailElement.innerText = `IT'S Last Warning!`;
+        resultDetailElement.style.color = "#F59E0B";
+      }
     }
   }
 
